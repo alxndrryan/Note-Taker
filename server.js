@@ -3,21 +3,19 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.use(express.static("public"));
 
-//get request for html
-// app.get("/notes", function(req, res) {
-//     res.sendFile(path.join(path.join(__dirname, "/public"), "notes.html"));
-// });
+//get requests for api routes
+app.get("/api/notes", function(req, res) {
+    res.sendFile(path.join(__dirname, "/db/db.json"));
+});
 
-// app.get("*", function(req, res) {
-//     res.sendFile(path.join(path.join(__dirname, "/public"), "index.html"));
-// });
+//get requests for html routes
 
 app.get("/notes", function(req, res) {
     res.sendFile(path.join(__dirname, "/public/notes.html"));
@@ -26,6 +24,8 @@ app.get("/notes", function(req, res) {
 app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
 });
+
+
 
 
 
