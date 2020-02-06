@@ -16,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/alxndryn/wk-11-hw/issues"
   },
-  "homepage": "https://github.com/alxndryn/wk-11-hw#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "path": "^0.12.7"
-  }
+  "homepage": "https://github.com/alxndryn/wk-11-hw#readme"
 }
