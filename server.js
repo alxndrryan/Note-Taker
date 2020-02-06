@@ -25,6 +25,19 @@ app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "/public/index.html"));
 });
 
+//post request to save notes
+app.post("/api/notes", function(req, res) {
+    let notes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
+    let newNote = req.body;
+    let uniqueID = (notes.length).toString();
+    newNote.id = uniqueID;
+    notes.push(newNote);
+
+    fs.writeFileSync("./db/db.json", JSON.stringify(notes));
+    console.log("New note saved to database! Content: ", newNote);
+    res.json(notes);
+})
+
 
 
 
