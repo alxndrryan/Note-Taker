@@ -1,6 +1,6 @@
 # Note-Taker
 
-Note-Taker is a web application for writing, saving, and deleting notes. Using a JSON file as the database for this application, the notes are created, stored, or removed from the database through HTTP request methods. This project was created to reinforce my knowledge of making HTTP requests to a server.    
+Note-Taker is a simple web application for writing, saving, and deleting notes. Using a JSON file as the database for this application, the notes are created, stored, or removed from the database through HTTP request methods. This project was created to reinforce my knowledge of making HTTP requests to a server.    
 
 
 ## Future Development
