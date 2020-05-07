@@ -12,3 +12,8 @@ Note-Taker is a simple web application for writing, saving, and deleting notes. 
 
 ## Future Development
 - Allow note editing
+
+
+## Screenshot
+
+![](note-taker.png)
